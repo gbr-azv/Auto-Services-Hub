@@ -24,8 +24,6 @@ from backend.autoserviceshub.views.customer_views import CustomerViewSet
 router = DefaultRouter()
 router.register(r'customers', CustomerViewSet, basename='customer')
 
-from backend.autoserviceshub.views.customer_views import CustomerListView
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls))
