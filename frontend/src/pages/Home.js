@@ -1,9 +1,10 @@
+import Menu from '../Components/Menu'
 import React from 'react'
 
-const Home = () => {
+function Home() {
   return (
     <div>
-      
+     
     </div>
   )
 }
