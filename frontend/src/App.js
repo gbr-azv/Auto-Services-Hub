@@ -1,7 +1,8 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Login from './pages/Login'
-import Menu from './pages/Home'
+import React from 'react';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import Menu from './pages/Home';
 import Home from "./pages/Home";
 import Costumers from "./pages/Costumers";
 import Vehicles from "./pages/Vehicles";
