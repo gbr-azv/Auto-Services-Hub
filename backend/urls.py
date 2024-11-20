@@ -20,9 +20,11 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 from backend.autoserviceshub.views.customer_views import CustomerViewSet
+from backend.autoserviceshub.views.vehicle_views import VehicleViewSet
 
 router = DefaultRouter()
 router.register(r'customers', CustomerViewSet, basename='customer')
+router.register(r'vehicles', VehicleViewSet, basename='vehicle')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
