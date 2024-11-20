@@ -1,7 +1,9 @@
-import React from 'react'
-import {FaUser, FaLock} from 'react-icons/fa'
-import { useState } from 'react'
-import "./Login.css"
+import React from 'react';
+
+import {FaUser, FaLock} from 'react-icons/fa';
+import { useState } from 'react';
+
+import "../styles/Login.css";
 
 const Login = () => {
   
@@ -18,31 +20,36 @@ const Login = () => {
   }
   
   
-    return (
+  return (
     <div className='container'>
       
       <form onSubimit={handleSubmit}>
-      <h1>Auto Services</h1>
+
+        <h1>Auto Services</h1>
         <h2>Acesse o sistema</h2>
+
         <div className="input-field">
-            <input type="email" placeholder='E-mail' onChange={(e) => setUsername(e.target.value)}/>
-            <FaUser className='icon' />
-        </div>
-        <div className="input-field">
-            <input type="password" placeholder='Senha' onChange={(e) => setPassword(e.target.value)}/>
-            <FaLock className='icon' />
+          <input type="email" placeholder='E-mail' onChange={(e) => setUsername(e.target.value)}/>
+          <FaUser className='icon' />
         </div>
 
-        <div className='recall-forget'>
-            <label>
-                <input type="checkbox" /> Lembre de mim
-            </label>
-            <a href= "#">Esqueceu a senha?</a>
+        <div className="input-field">
+          <input type="password" placeholder='Senha' onChange={(e) => setPassword(e.target.value)}/>
+          <FaLock className='icon' />
         </div>
+
+        {/* <div className='recall-forget'>
+          <label>
+            <input type="checkbox" /> Lembre de mim
+          </label>
+          <a href= "#">Esqueceu a senha?</a>
+        </div> */}
+
         <button>Entrar</button>
+        
       </form>
     </div>
-  )
+  );
 }
 
 export default Login
