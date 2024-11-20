@@ -1,0 +1,37 @@
+.container-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    padding: 32px;
+
+}
+
+.container-list h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+}
+
+  .container-list th {
+    text-align: center;
+    font-size: 24px;
+    color:#000000;
+    background-color: #f4f4f4;
+}
+
+.container-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.container-list table, th, td {
+    border: 2px solid #ddd;
+}
+
+.container-list th, td {
+    padding: 10px;
+    text-align: left;
+}
