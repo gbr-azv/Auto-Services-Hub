@@ -7,8 +7,12 @@
 }
 
 .container-home .title {
+    color: #000;
     font-size: 30px;
     font-size: 2.5em;
+}
+
+.container-home .subtitle{
     color: #000;
 }
 
@@ -28,7 +32,7 @@
 
 }
 
-.container-home .items-container {
+.container-home .item {
     color: #000;
     background-color: #eeeeee;
     margin-bottom: 20px;
