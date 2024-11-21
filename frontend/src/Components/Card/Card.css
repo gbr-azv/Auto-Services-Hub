@@ -1,0 +1,33 @@
+.card-main {
+    display: flex;
+    align-items: left;
+    justify-content: top;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #c6c6c6;
+    -webkit-box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.75);
+    padding: 0;
+}
+
+.report-title {
+    padding: 10px 10px;
+    width: 100%;
+    height: 50%;
+    background-color: #4d9681;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.report-result {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #000;
+}

@@ -1,0 +1,9 @@
+.dashboard-main {
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    width: 100%;
+    padding: 0 0 0 15%;
+    background-color: #ffffff;
+    height: 120px;
+}
