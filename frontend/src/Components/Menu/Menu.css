@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kode+Mono:wght@400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+
+ul, li, a {
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.navbar-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    gap: 20px;
+    background-color: #3d414d;
+    height: 100vh;
+    width: 15%;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: fixed;
+}
+
+.navbar-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.links-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #7c8189;
+    padding: 20px 0px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.navbar-buttons-container li:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.version {
+    margin-top: 100px;
+}
+
+.icon {
+    font-size: 18px;
+}

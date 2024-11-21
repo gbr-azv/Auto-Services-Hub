@@ -24,6 +24,8 @@ from backend.autoserviceshub.views.vehicle_views import VehicleViewSet
 from backend.autoserviceshub.views.employees_views import EmployeeViewSet
 from backend.autoserviceshub.views.services_views import ServiceViewSet
 from backend.autoserviceshub.views.parts_views import PartViewSet
+from backend.autoserviceshub.views.service_orders_views import ServiceOrderViewSet
+from backend.autoserviceshub.views.service_parts_views import ServicePartViewSet
 
 router = DefaultRouter()
 router.register(r'customers', CustomerViewSet, basename='customer')
@@ -31,6 +33,8 @@ router.register(r'vehicles', VehicleViewSet, basename='vehicle')
 router.register(r'employees', EmployeeViewSet, basename='employee')
 router.register(r'services', ServiceViewSet, basename='service')
 router.register(r'parts', PartViewSet, basename='part')
+router.register(r'service-orders', ServiceOrderViewSet, basename='service_order')
+router.register(r'service-parts', ServicePartViewSet, basename='service_part')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
