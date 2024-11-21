@@ -26,7 +26,7 @@ function Home() {
 
       <div className='item'>
         <h2> Veículos </h2>
-        <p>Tenha controle dos seus clientes</p> <br></br>
+        <p>Gerencie os serviços em veículos</p> <br></br>
         <img src='./veiculos.jpg' className='veiculos'></img>
         <a className='view-button' href='/'>Vizualizar</a>
       </div>

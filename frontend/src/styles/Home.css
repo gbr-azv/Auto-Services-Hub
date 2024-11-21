@@ -22,11 +22,12 @@
 }
 .container-home .subtitle{
     color: #000;
+    font-size: 20px;
 }
 
 .container-home .items-container{
     display: flex;  
-    gap: 20px;  
+    gap: 30px;  
     align-items: center;
     flex-grow: 1;
     margin-top: 100px;
@@ -50,9 +51,9 @@
     color: #000;
 
 }
-p{
+.item p{
     color: #000;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.3;
 }
 
