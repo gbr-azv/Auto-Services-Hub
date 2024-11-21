@@ -13,17 +13,21 @@ function Home() {
       <div className='item'>
         <h2> Clientes </h2>
         <p>Gerencie o atendimento com seus clientes</p> <br></br>
+        <img src='./clientes.jpg' className='clientes'></img>
+        <br></br>
         <a className='view-button' href='/'>Vizualizar</a>
         </div>
       <div className="item">
         <h2> Funcionários </h2>
         <p>Tenha controle sobre seus funcionários</p> <br></br>
+        <img src='./funcionarios.jpg' className='funcionarios'></img>
         <a className='view-button' href='/'>Vizualizar</a>
       </div>
 
       <div className='item'>
         <h2> Veículos </h2>
         <p>Tenha controle dos seus clientes</p> <br></br>
+        <img src='./veiculos.jpg' className='veiculos'></img>
         <a className='view-button' href='/'>Vizualizar</a>
       </div>
       </div>
