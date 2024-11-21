@@ -6,12 +6,12 @@ function Header(props) {
 
     return (
         <div className='header-main'>
-            <div>
+            <div className='object-counter'>
                 <span className='object-name'>
-                    Clientes {/* {props.object} */}
+                    {props.title}
                 </span>
                 <span>
-                    (50 itens cadastrados) {/* {props.total} itens cadastrados */}
+                    ({props.counter} itens cadastrados)
                 </span>
             </div>
             <div className='user-icon-info'>

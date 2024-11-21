@@ -48,6 +48,13 @@
     font-size: 18px;
 }
 
+.object-counter {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5px;
+}
+
 .object-name {
     font-weight: bold;
     font-size: 32px;

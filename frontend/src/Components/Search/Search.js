@@ -8,7 +8,7 @@ function Search(props) {
         <div className='search-main'>
             <input 
                 type="text" 
-                placeholder="Pesquisar por Nome do Cliente" 
+                placeholder={`Pesquisar por ${props.placeholder}`}
                 className='search-input'
             /> {/*props.object*/}
             <button 
@@ -17,7 +17,7 @@ function Search(props) {
             >
                 <FaPlus className='plus-icon'/>
                 <span>
-                    Novo Cliente
+                    {props.addButton}
                 </span>
             </button> {/*props.object*/}
         </div>
