@@ -5,7 +5,8 @@ const columnConfig = {
     employee: ['id', 'name', 'phone', 'email', 'salary'],
     vehicle: ['id', 'license_plate', 'brand', 'model', 'vehicle_type'],
     part: ['id', 'name', 'description', 'brand', 'quantity_in_stock'],
-    service: ['id', 'name', 'description', 'estimated_time', 'price']
+    service: ['id', 'name', 'description', 'estimated_time', 'price'],
+    serviceOrder: ['id', 'date_of_service', 'total_cost', 'observations', 'customer', 'employee', 'service', 'status', 'vehicle']
 };
 
 export const tableHeaders = {
@@ -52,6 +53,15 @@ export const tableHeaders = {
             <th>Descrição</th>
             <th>Duração</th>
             <th>Preço</th>
+        </tr>
+    ),
+    serviceOrder: (
+        <tr>
+            <th>ID</th>
+            <th>Data do Serviço</th>
+            <th>Observações</th>
+            <th>Total</th>
+            <th>Status</th>
         </tr>
     ),
 };

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom';
+
 import '../styles/Home.css';
 
 function Home() {
@@ -16,21 +18,27 @@ function Home() {
           <p>Gerencie o atendimento com seus clientes</p> <br></br>
           <img src='./clientes.jpg' className='clientes'></img>
           <br></br>
-          <a className='view-button' href='/'>Visualizar</a>
+          <Link className='view-button' to="/Costumers">
+            <span>Visualizar</span>
+          </Link>
         </div>
 
         <div className="item">
           <h2> Funcionários </h2>
           <p>Tenha controle sobre seus funcionários</p> <br></br>
           <img src='./funcionarios.jpg' className='funcionarios'></img>
-          <a className='view-button' href='/'>Visualizar</a>
+          <Link className='view-button' to="/Employees">
+            <span>Visualizar</span>
+          </Link>
         </div>
 
         <div className='item'>
           <h2> Veículos </h2>
           <p>Gerencie os serviços em veículos</p> <br></br>
           <img src='./veiculos.jpg' className='veiculos'></img>
-          <a className='view-button' href='/'>Visualizar</a>
+          <Link className='view-button' to="/Vehicles">
+            <span>Visualizar</span>
+          </Link>
         </div>
       </div>
     </div>

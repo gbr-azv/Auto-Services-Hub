@@ -57,4 +57,17 @@ export const formConfig = {
         ],
         apiRoute: "http://127.0.0.1:8000/services/",
     },
+    serviceOrder: {
+        fields: [
+            { apiName: "date_of_service", label: "Data do Serviço", placeholder: "Digite a data do serviço" },
+            { apiName: "total_cost", label: "Total", placeholder: "Digite o total" },
+            { apiName: "observations", label: "Observações", placeholder: "Digite a observação" },
+            { apiName: "customer", label: "ID do Cliente", placeholder: "Digite o ID do Cliente" },
+            { apiName: "employee", label: "ID do Funcionário", placeholder: "Digite o ID do Funcionário" },
+            { apiName: "service", label: "ID do Serviço", placeholder: "Digite o ID do Serviço" },
+            { apiName: "status", label: "Status", placeholder: "Digite o status" },
+            { apiName: "vehicle", label: "ID do Veículo", placeholder: "Digite o ID do Veículo" }
+        ],
+        apiRoute: "http://127.0.0.1:8000/service-orders/",
+    }
 }

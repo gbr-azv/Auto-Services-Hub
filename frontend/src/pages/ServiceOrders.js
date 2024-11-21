@@ -11,11 +11,11 @@ import '../styles/Costumers.css';
 
 function ServiceOrders() {
 
-  const [serviceorders, setServiceOrders] = useState([]);
+  const [serviceOrders, setServiceOrders] = useState([]);
 
   useEffect(() => {
     const fetchServiceOrders = async () => {
-      const response = await fetch('http://127.0.0.1:8000/erviceorders/');
+      const response = await fetch('http://127.0.0.1:8000/service-orders/');
       const result = await response.json();
       setServiceOrders(result);
     }
@@ -25,18 +25,19 @@ function ServiceOrders() {
   return (
     <div className='customers-main'>
       <Header
-        counter={serviceorders.count}
-        title={'Ordem de Serviços'}
+        counter={serviceOrders.count}
+        title={'Ordens de Serviço'}
       />
       <Search
-        link={'/ServiceOrders/new-serviceorder'}
-        placeholder={'Nome da Ordem de Serviço'}
+        link={'/ServiceOrders/new-serviceOrder'}
+        placeholder={'Data da Ordem de Serviço'}
         addButton={'Nova Ordem de Serviço'}
       />
       <Dashboard/>
       <Table 
-        data={serviceorders} 
-        object={'serviceorder'}
+        data={serviceOrders} 
+        object={'serviceOrder'}
+        urlRoute={'ServiceOrders'}
       />
     </div>
   );

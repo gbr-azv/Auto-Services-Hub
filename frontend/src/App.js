@@ -13,6 +13,8 @@ import NewVehicle from './pages/NewVehicle';
 import EditVehicle from './pages/EditVehicle';
 
 import ServiceOrders from './pages/ServiceOrders';
+import NewServiceOrder from './pages/NewServiceOrders';
+import EditServiceOrder from './pages/EditServiceOrder';
 
 import Services from './pages/Services';
 import NewService from './pages/NewService';
@@ -41,7 +43,9 @@ function App() {
         <Route path="/Vehicles" element={<Vehicles />}/>
         <Route path="/Vehicles/new-vehicle" element={<NewVehicle/>}/>
         <Route path="/Vehicles/edit-vehicle/:id" element={<EditVehicle/>}/>
-        <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
+        <Route path="/ServiceOrders" element={<ServiceOrders/>}/>
+        <Route path="/ServiceOrders/new-serviceOrder" element={<NewServiceOrder/>}/>
+        <Route path="/ServiceOrders/edit-serviceOrder/:id" element={<EditServiceOrder/>}/>
         <Route path="/Services" element={<Services/>}/>
         <Route path="/Services/new-service" element={<NewService/>}/>
         <Route path="/Services/edit-service/:id" element={<EditService/>}/>
