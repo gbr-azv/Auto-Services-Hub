@@ -16,6 +16,17 @@ class ServiceOrderPagination(PageNumberPagination):
 class ServiceOrderViewSet(viewsets.ViewSet):
     pagination_class = ServiceOrderPagination
 
+    def create(self, request):
+
+        """Create a new service order."""
+
+        serializer = ServiceOrderSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def list(self, request):
 
         """List all service_orders with pagination."""

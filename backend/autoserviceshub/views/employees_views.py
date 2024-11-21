@@ -16,6 +16,17 @@ class EmployeePagination(PageNumberPagination):
 class EmployeeViewSet(viewsets.ViewSet):
     pagination_class = EmployeePagination
 
+    def create(self, request):
+
+        """Create a new employee."""
+
+        serializer = EmployeeSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def list(self, request):
 
         """List all employees with pagination."""

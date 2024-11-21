@@ -10,9 +10,11 @@ function Header(props) {
                 <span className='object-name'>
                     {props.title}
                 </span>
-                <span>
-                    ({props.counter} itens cadastrados)
-                </span>
+                {props.counter > 0 ? (
+                    <span>
+                        ({props.counter} itens cadastrados)
+                    </span>
+                ) : null}
             </div>
             <div className='user-icon-info'>
                 <FaUserCircle className='user-icon'/>

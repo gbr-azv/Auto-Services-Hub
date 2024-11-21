@@ -1,5 +1,7 @@
 import './Search.css';
 
+import { Link } from 'react-router-dom';
+
 import { FaPlus } from 'react-icons/fa';
 
 function Search(props) {
@@ -16,9 +18,7 @@ function Search(props) {
                 className='search-button'
             >
                 <FaPlus className='plus-icon'/>
-                <span>
-                    {props.addButton}
-                </span>
+                <Link to={props.link}>{props.addButton}</Link>
             </button> {/*props.object*/}
         </div>
     )
