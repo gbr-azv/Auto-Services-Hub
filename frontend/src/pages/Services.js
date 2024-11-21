@@ -23,10 +23,10 @@ function Services() {
   }, []);
 
   return (
-    <div className='customers-main'>
+    <div className='services-main'>
       <Header
         counter={services.count}
-        title={'Servicos'}
+        title={'Serviços'}
       />
       <Search
         link={'/Services/new-service'}
@@ -37,6 +37,7 @@ function Services() {
       <Table 
         data={services} 
         object={'service'}
+        urlRoute={'Services'}
       />
     </div>
   );

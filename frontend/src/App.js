@@ -15,6 +15,8 @@ import EditVehicle from './pages/EditVehicle';
 import ServiceOrders from './pages/ServiceOrders';
 
 import Services from './pages/Services';
+import NewService from './pages/NewService';
+import EditService from './pages/EditService';
 
 import Parths from './pages/Parths';
 import NewParth from './pages/NewParth';
@@ -41,6 +43,8 @@ function App() {
         <Route path="/Vehicles/edit-vehicle/:id" element={<EditVehicle/>}/>
         <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
         <Route path="/Services" element={<Services/>}/>
+        <Route path="/Services/new-service" element={<NewService/>}/>
+        <Route path="/Services/edit-service/:id" element={<EditService/>}/>
         <Route path="/Parts" element={<Parths/>}/>
         <Route path="/Parts/new-part" element={<NewParth/>}/>
         <Route path="/Parts/edit-part/:id" element={<EditParth/>}/>

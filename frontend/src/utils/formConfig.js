@@ -47,4 +47,14 @@ export const formConfig = {
         ],
         apiRoute: "http://127.0.0.1:8000/parts/",
     },
+    service: {
+        fields: [
+            { apiName: "name", label: "Nome", placeholder: "Digite o nome" },
+            { apiName: "description", label: "Descrição", placeholder: "Digite a descrição" },
+            { apiName: "estimated_time", label: "Duração", placeholder: "Digite a duração do serviço" },
+            { apiName: "price", label: "Preço", placeholder: "Digite o preço" },
+            { apiName: "category", label: "Categoria", placeholder: "Digite o ID da categoria" }
+        ],
+        apiRoute: "http://127.0.0.1:8000/services/",
+    },
 }

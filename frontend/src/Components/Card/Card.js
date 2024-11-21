@@ -5,10 +5,10 @@ function Card(props) {
     return (
         <div className='card-main'>
             <span className='report-title'>
-                Média de Idade dos Clientes
+                Relatório
             </span> {/*props.title*/}
             <span className='report-result'>
-                35 anos
+                Informações
             </span> {/*props.result*/}
         </div>
     )

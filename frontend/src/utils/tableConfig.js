@@ -4,7 +4,8 @@ const columnConfig = {
     customer: ['id', 'name', 'social_security_number', 'phone', 'email'],
     employee: ['id', 'name', 'phone', 'email', 'salary'],
     vehicle: ['id', 'license_plate', 'brand', 'model', 'vehicle_type'],
-    part: ['id', 'name', 'description', 'brand', 'quantity_in_stock']
+    part: ['id', 'name', 'description', 'brand', 'quantity_in_stock'],
+    service: ['id', 'name', 'description', 'estimated_time', 'price']
 };
 
 export const tableHeaders = {
@@ -42,6 +43,15 @@ export const tableHeaders = {
             <th>Descrição</th>
             <th>Marca</th>
             <th>Qtde. Estoque</th>
+        </tr>
+    ),
+    service: (
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Duração</th>
+            <th>Preço</th>
         </tr>
     ),
 };
