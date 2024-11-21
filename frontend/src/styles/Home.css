@@ -14,7 +14,7 @@
 }
 
 .container-home h1 span {
-    color: #Ffbb33;
+    color: #38C141;
     padding: 0 .2em;
     background-color: #3d414d;
 
@@ -49,18 +49,14 @@
 }
  
 .container-home .vizualizar{
-    color: blue;
-    background-color: #Ffbb33;
+    color: #000;
+    background-color: #38C141;
     padding: 10px 20px;
     text-decoration: none;
 }
 
 h2{
     color: #000;
-}
-
-.container-home .vizualizar{
-    color: blue;
 }
 
 .container-home .item{
