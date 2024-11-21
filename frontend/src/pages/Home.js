@@ -4,9 +4,10 @@ import styles from '../styles/Home.css'
 
 function Home() {
   return (
-    <div className='container-home'>
-      <h1> Bem vindo ao <span>Auto Service</span> </h1>
+   <div className='container-home'>
+      <h1> Bem vindo ao <span>Auto Service</span> 
         <p>Comece a gerenciar seu atendimento!</p>
+        </h1>
 
       <div className='item'>
         <h2> Clientes </h2>
