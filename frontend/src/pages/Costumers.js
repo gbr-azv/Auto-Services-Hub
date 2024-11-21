@@ -118,7 +118,7 @@ function Costumers() {
                 type="text"
                 value={newCostumers.phone}
                 onChange={(e) =>
-                  setNewCostumers({ ...newCostumers, address: e.target.value })
+                  setNewCostumers({ ...newCostumers, phone: e.target.value })
                 }
                 required
               />
