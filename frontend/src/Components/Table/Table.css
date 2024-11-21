@@ -27,8 +27,12 @@
     color: #fff;
 }
 
+.table-layout tr:hover {
+    background-color: #c6c6c6 !important;
+}
+
 .table-layout tr:nth-child(even) {
-    background-color: #e0e0e0;;
+    background-color: #e0e0e0;
 }
 
 .table-layout tr:nth-child(odd) {

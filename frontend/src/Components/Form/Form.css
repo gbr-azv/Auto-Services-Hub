@@ -28,7 +28,15 @@
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);;
 }
 
-.registry-button {
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.registry-button,
+.delete-button {
     display: flex;
     align-items:center;
     justify-content: center;
@@ -42,7 +50,12 @@
     font-weight: bold;
 }
 
-.registry-button:hover {
+.delete-button {
+    background-color: #ff3737;
+}
+
+.registry-button:hover,
+.delete-button:hover {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);;

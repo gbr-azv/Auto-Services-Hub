@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Costumers from './pages/Costumers';
 import NewCostumer from './pages/NewCostumer';
+import EditCostumer from './pages/EditCostumer';
 import Vehicles from './pages/Vehicles';
 import ServiceOrders from './pages/ServiceOrders';
 import Services from './pages/Services';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/Costumers" element={<Costumers/>}/>
         <Route path="/Costumers/new-costumer" element={<NewCostumer/>}/>
+        <Route path="/Costumers/edit-costumer/:id" element={<EditCostumer/>}/>
         <Route path="/Vehicles" element={<Vehicles />}/>
         <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
         <Route path="/Services" element={<Services/>}/>

@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Input from '../Input/Input';
-import { formConfig } from '../../utils/formConfig';
 
 import './Form.css';
 
-function Form(props) {
-
+function Form({ initialData = {}, object, config, onSubmit }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({});
+
+  useEffect(() => {
+    setFormData(initialData);
+  }, [initialData]);
 
   const handleChange = (fieldName, value) => {
     setFormData((prev) => ({ ...prev, [fieldName]: value }));
@@ -15,31 +19,37 @@ function Form(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
+    if (onSubmit) {
+      await onSubmit(formData);
+    }
+  };
+
+  const handleDelete = async (event) => {
+    event.preventDefault();
     try {
-      const response = await fetch(formConfig.customer.apiRoute, {
-        method: "POST",
+      const response = await fetch(`http://127.0.0.1:8000/customers/${formData.id}/`, {
+        method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        }
       });
 
       if (!response.ok) {
-        throw new Error("Erro ao enviar o formulário: " + response.json);
+        throw new Error("Erro ao deletar o registro.");
       }
 
-      alert("Cadastro realizado com sucesso!");
+      alert("Cliente deletado com sucesso!");
+      navigate(`/Costumers/`);
     } catch (error) {
-      console.error("Erro:", error);
-      alert("Erro ao realizar o cadastro.");
+      console.error("Erro ao deletar o registro:", error);
+      alert("Erro ao deletar o registro.");
     }
   };
 
   return (
     <form className='form-main' onSubmit={handleSubmit}>
       <div className='form-inputs'>
-        {formConfig.customer.fields.map((field) => (
+        {config.fields.map((field) => (
           <Input
             key={field.apiName}
             placeholder={field.placeholder}
@@ -47,10 +57,28 @@ function Form(props) {
             onChange={(e) => handleChange(field.apiName, e.target.value)}
           />
         ))}
-        <button type='submit' className='registry-button'>Cadastrar</button>
+        <div className="form-buttons">
+          <button type='submit' className='registry-button'>
+            {Object.keys(initialData).length > 0 ? "Salvar Alterações" : "Cadastrar"}
+          </button>
+          <DeleteButton/>
+        </div>
       </div>
     </form>
   );
+
+  function DeleteButton() {
+    const location = useLocation();
+
+    if (!location.pathname.includes('edit-costumer')) {
+      return null;
+    }
+    return (
+      <button type="button" className='delete-button' onClick={handleDelete}>
+        Excluir
+      </button>
+    );
+  }
 }
 
 export default Form

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const columnConfig = {
     customer: ['id', 'name', 'social_security_number', 'phone', 'email'],
 };
@@ -26,9 +28,16 @@ export const renderRows = (data, object) => {
     }
 
     return data.results.map((item) => (
-        <tr key={item.id}>
+        <tr 
+            key={item.id}
+            style={{ cursor: "pointer" }}
+        >
             {columns.map((column, i) => (
-                <td key={i}>{item[column]}</td>
+                <td key={i}>
+                    <Link to={`/Costumers/edit-costumer/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+                        {item[column]}
+                    </Link>
+                </td>
             ))}
         </tr>
     ));
