@@ -6,13 +6,16 @@
     padding: 15em;
 }
 
-.container-home h1 {
+.container-home .title {
     font-size: 30px;
     font-size: 2.5em;
-    margin-bottom: .5em;
     color: #000;
 }
 
+.title {
+    margin-bottom: .5em;
+
+}
 .container-home h1 span {
     color: #38C141;
     padding: 0 .2em;
@@ -25,7 +28,7 @@
 
 }
 
-.container-home .item {
+.container-home .items-container {
     color: #000;
     background-color: #eeeeee;
     margin-bottom: 20px;
@@ -40,30 +43,18 @@
     padding: 10px;
 }
 
-.container-home .item p{
+.container-home .items-container p{
     color: #000;
 }
  
-.container-home .item h2{
+.container-home .items-container h2{
     color: #000;
 }
  
-.container-home .vizualizar{
+.container-home .view-button{
     color: #000;
     background-color: #38C141;
     padding: 10px 20px;
     text-decoration: none;
-}
-
-h2{
-    color: #000;
-}
-
-.container-home .item{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    border-radius: 4px;
 }
