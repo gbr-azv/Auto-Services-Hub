@@ -21,6 +21,11 @@
 
 }
 
+.container-home h1 p{
+    color: #000;
+
+}
+
 .container-home .item {
     color: #000;
     text-shadow: 0.01em 0.01em 0.01em black;
