@@ -19,7 +19,7 @@ function App() {
         <Route path="/Vehicles" element={<Vehicles />}/>
         <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
         <Route path="/Services" element={<Services/>}/>
-        <Route path="/Paths" element={<Parths/>}/>
+        <Route path="/Paths" element={<o0-Parths/>}/>
         <Route path="/Employees" element={<Employees/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes>

@@ -6,7 +6,7 @@
     padding: 15em;
 }
 
-.container-home h1{
+.container-home h1 {
     font-size: 30px;
     font-size: 2.5em;
     margin-bottom: .5em;
@@ -14,7 +14,7 @@
     text-shadow: 0.01em 0.01em 0.01em black
 }
 
-.container-home h1 span{
+.container-home h1 span {
     color: #Ffbb33;
     padding: 0 .2em;
     background-color: #3d414d;
@@ -60,3 +60,19 @@
     text-shadow: 0.01em 0.01em 0.01em black;
 }
 
+h2{
+    color: #000;
+}
+
+.container-home .vizualizar{
+    color: blue;
+}
+
+.container-home .item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
