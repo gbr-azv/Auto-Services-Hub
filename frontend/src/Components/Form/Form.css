@@ -1,0 +1,50 @@
+.form-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: #fff;
+    gap: 20px;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 10px;
+    width: 40%;
+    padding: 2%;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: fixed;
+    right: 23%;
+    top: 10%;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);;
+}
+
+.registry-button {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 5px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4d9681;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.registry-button:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);;
+    cursor: pointer;
+}

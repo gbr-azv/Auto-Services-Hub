@@ -16,6 +16,17 @@ class ServicePagination(PageNumberPagination):
 class ServiceViewSet(viewsets.ViewSet):
     pagination_class = ServicePagination
 
+    def create(self, request):
+
+        """Create a new service."""
+
+        serializer = ServiceSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
     def list(self, request):
 
         """List all services with pagination."""

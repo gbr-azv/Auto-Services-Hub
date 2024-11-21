@@ -16,6 +16,17 @@ class VehiclePagination(PageNumberPagination):
 class VehicleViewSet(viewsets.ViewSet):
     pagination_class = VehiclePagination
 
+    def create(self, request):
+
+        """Create a new vehicle."""
+
+        serializer = VehicleSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
     def list(self, request):
 
         """List all vehicles with pagination."""
