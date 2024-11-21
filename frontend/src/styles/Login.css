@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Helvetica;
-  text-shadow: #000 1px 1px;
   color: #fff;
 }
 
@@ -12,7 +11,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("C:\Users\maria\OneDrive\Documentos\UCB\Programação\Web\Projeto extenssão web\Auto-Services-Hub\frontend\src\assets\fundo-login.jpg") no-repeat;
+  background: url("C:\Dev\auto-services-hub\frontend\public\fundo-login.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -94,7 +93,6 @@
   font-size: 16px;
   color: #333;
   font-weight: 700;
-  text-shadow: none;
 }
 
 .container .signup-link {
