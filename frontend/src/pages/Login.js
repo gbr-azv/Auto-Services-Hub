@@ -35,7 +35,7 @@ const Login = () => {
 
         <div className="input-field">
           <input type="password" placeholder='Senha' onChange={(e) => setPassword(e.target.value)}/>
-          <FaLock className='icon' />
+          <FaLock className='icon'/>
         </div>
 
         {/* <div className='recall-forget'>
