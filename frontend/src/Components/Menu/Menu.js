@@ -39,7 +39,7 @@ function Menu (){
                     </Link> 
                 </li>
                 <li> 
-                    <Link className='links-button' to="/Parths">
+                    <Link className='links-button' to="/Parts">
                         <FaBoxOpen className="icon" />
                         <span>Produtos</span>
                     </Link> 

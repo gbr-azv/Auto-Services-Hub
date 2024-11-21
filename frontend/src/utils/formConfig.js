@@ -37,4 +37,14 @@ export const formConfig = {
         ],
         apiRoute: "http://127.0.0.1:8000/vehicles/",
     },
+    part: {
+        fields: [
+            { apiName: "name", label: "Nome", placeholder: "Digite o nome" },
+            { apiName: "description", label: "Descrição", placeholder: "Digite a descrição" },
+            { apiName: "brand", label: "Marca", placeholder: "Digite a marca" },
+            { apiName: "quantity_in_stock", label: "Qtde. Estoque", placeholder: "Digite a quantidade em estoque" },
+            { apiName: "price", label: "Preço", placeholder: "Digite o preço" }
+        ],
+        apiRoute: "http://127.0.0.1:8000/parts/",
+    },
 }

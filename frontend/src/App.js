@@ -17,6 +17,8 @@ import ServiceOrders from './pages/ServiceOrders';
 import Services from './pages/Services';
 
 import Parths from './pages/Parths';
+import NewParth from './pages/NewParth';
+import EditParth from './pages/EditParths';
 
 import Employees from './pages/Employees';
 import NewEmployee from './pages/NewEmployee';
@@ -32,14 +34,16 @@ function App() {
         <Route path="/Costumers/new-customer" element={<NewCostumer/>}/>
         <Route path="/Costumers/edit-customer/:id" element={<EditCostumer/>}/>
         <Route path="/Employees" element={<Employees/>}/>
-        <Route path="/Employees/new-employee" element={<NewVehicle/>}/>
-        <Route path="/Employees/edit-employee/:id" element={<EditVehicle/>}/>
+        <Route path="/Employees/new-employee" element={<NewEmployee/>}/>
+        <Route path="/Employees/edit-employee/:id" element={<EditEmployee/>}/>
         <Route path="/Vehicles" element={<Vehicles />}/>
         <Route path="/Vehicles/new-vehicle" element={<NewVehicle/>}/>
         <Route path="/Vehicles/edit-vehicle/:id" element={<EditVehicle/>}/>
         <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
         <Route path="/Services" element={<Services/>}/>
         <Route path="/Parts" element={<Parths/>}/>
+        <Route path="/Parts/new-part" element={<NewParth/>}/>
+        <Route path="/Parts/edit-part/:id" element={<EditParth/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes>
     </Router>

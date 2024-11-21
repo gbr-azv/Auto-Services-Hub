@@ -11,32 +11,33 @@ import '../styles/Costumers.css';
 
 function Parths() {
 
-  const [parths, setParths] = useState([]);
+  const [parts, setParts] = useState([]);
 
   useEffect(() => {
-    const fetchParths = async () => {
-      const response = await fetch('http://127.0.0.1:8000/parths/');
+    const fetchParts = async () => {
+      const response = await fetch('http://127.0.0.1:8000/parts/');
       const result = await response.json();
-      setParths(result);
+      setParts(result);
     }
-    fetchParths();
+    fetchParts();
   }, []);
 
   return (
     <div className='customers-main'>
       <Header
-        counter={parths.count}
+        counter={parts.count}
         title={'Peças'}
       />
       <Search
-        link={'/Parths/new-parth'}
+        link={'/Parts/new-part'}
         placeholder={'Nome da Peça'}
         addButton={'Nova Peça'}
       />
       <Dashboard/>
       <Table 
-        data={parths} 
-        object={'parth'}
+        data={parts} 
+        object={'part'}
+        urlRoute={'Parts'}
       />
     </div>
   );
