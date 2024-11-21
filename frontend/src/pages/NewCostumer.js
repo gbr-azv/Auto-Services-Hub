@@ -34,7 +34,8 @@ function NewCostumer() {
     <div className="edit-customer-main">
       <Header counter={0} title="Cadastrar Cliente" />
       <Form
-        object="customer"
+        apiRoute="customers"
+        urlRoute="Costumers"
         config={formConfig.customer}
         initialData={{}}
         onSubmit={handleSubmit}

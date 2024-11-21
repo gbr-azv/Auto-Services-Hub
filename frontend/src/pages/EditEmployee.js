@@ -9,26 +9,26 @@ import { formConfig } from "../utils/formConfig";
 
 import "../styles/EditCostumer.css";
 
-function EditCostumer() {
+function EditEmployee() {
   const { id } = useParams();
-  const [customerData, setCustomerData] = useState(null);
+  const [employeeData, setEmployeeData] = useState(null);
 
   useEffect(() => {
-    const fetchCustomer = async () => {
+    const fetchEmployee = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/customers/${id}/`);
+        const response = await fetch(`http://127.0.0.1:8000/employees/${id}/`);
         const result = await response.json();
-        setCustomerData(result);
+        setEmployeeData(result);
       } catch (error) {
-        console.error("Erro ao buscar os dados do cliente:", error);
+        console.error("Erro ao buscar os dados do funcionário:", error);
       }
     };
-    fetchCustomer();
+    fetchEmployee();
   }, [id]);
 
   const handleSubmit = async (formData) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/customers/${id}/`, {
+      const response = await fetch(`http://127.0.0.1:8000/employees/${id}/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -40,29 +40,29 @@ function EditCostumer() {
         throw new Error("Erro ao salvar os dados.");
       }
 
-      alert("Cliente atualizado com sucesso!");
+      alert("Funcionário atualizado com sucesso!");
     } catch (error) {
       console.error("Erro ao salvar os dados:", error);
       alert("Erro ao salvar os dados.");
     }
   };
   
-  if (!customerData) {
-    return <p>Carregando dados do cliente...</p>;
+  if (!employeeData) {
+    return <p>Carregando dados do funcionário...</p>;
   }
 
   return (
     <div className="edit-customer-main">
-      <Header counter={0} title="Editar Cliente" />
+      <Header counter={0} title="Editar Funcionário" />
       <Form
-        apiRoute="customers"
-        urlRoute="Costumers"
-        config={formConfig.customer}
-        initialData={customerData}
+        apiRoute="employees"
+        urlRoute="Employees"
+        config={formConfig.employee}
+        initialData={employeeData}
         onSubmit={handleSubmit}
       />
     </div>
   );
 }
 
-export default EditCostumer;
+export default EditEmployee;

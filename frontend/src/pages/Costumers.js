@@ -29,7 +29,7 @@ function Costumers() {
         title={'Clientes'}
       />
       <Search
-        link={'/Costumers/new-costumer'}
+        link={'/Costumers/new-customer'}
         placeholder={'Nome do Cliente'}
         addButton={'Novo Cliente'}
       />
@@ -37,6 +37,7 @@ function Costumers() {
       <Table 
         data={customers} 
         object={'customer'}
+        urlRoute={'Costumers'}
       />
     </div>
   );

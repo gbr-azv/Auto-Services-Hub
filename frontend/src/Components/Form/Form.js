@@ -5,7 +5,7 @@ import Input from '../Input/Input';
 
 import './Form.css';
 
-function Form({ initialData = {}, object, config, onSubmit }) {
+function Form({ initialData = {}, apiRoute, urlRoute, config, onSubmit }) {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({});
 
@@ -27,7 +27,7 @@ function Form({ initialData = {}, object, config, onSubmit }) {
   const handleDelete = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`http://127.0.0.1:8000/customers/${formData.id}/`, {
+      const response = await fetch(`http://127.0.0.1:8000/${apiRoute}/${formData.id}/`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -38,8 +38,8 @@ function Form({ initialData = {}, object, config, onSubmit }) {
         throw new Error("Erro ao deletar o registro.");
       }
 
-      alert("Cliente deletado com sucesso!");
-      navigate(`/Costumers/`);
+      alert("Registro deletado com sucesso!");
+      navigate(`/${urlRoute}/`);
     } catch (error) {
       console.error("Erro ao deletar o registro:", error);
       alert("Erro ao deletar o registro.");
@@ -70,7 +70,7 @@ function Form({ initialData = {}, object, config, onSubmit }) {
   function DeleteButton() {
     const location = useLocation();
 
-    if (!location.pathname.includes('edit-costumer')) {
+    if (!location.pathname.includes('edit')) {
       return null;
     }
     return (

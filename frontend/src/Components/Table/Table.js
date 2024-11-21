@@ -18,7 +18,7 @@ function Table(props) {
                     {tableHeaders[props.object]}
                 </thead>
                 <tbody>
-                    {renderRows(props.data, props.object)}
+                    {renderRows(props.data, props.object, props.urlRoute)}
                 </tbody>
             </table>
         </div>

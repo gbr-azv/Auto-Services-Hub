@@ -37,6 +37,7 @@ function Employees() {
       <Table 
         data={employees} 
         object={'employee'}
+        urlRoute={'Employees'}
       />
     </div>
   );
