@@ -9,6 +9,8 @@ import NewCostumer from './pages/NewCostumer';
 import EditCostumer from './pages/EditCostumer';
 
 import Vehicles from './pages/Vehicles';
+import NewVehicle from './pages/NewVehicle';
+import EditVehicle from './pages/EditVehicle';
 
 import ServiceOrders from './pages/ServiceOrders';
 
@@ -30,9 +32,11 @@ function App() {
         <Route path="/Costumers/new-customer" element={<NewCostumer/>}/>
         <Route path="/Costumers/edit-customer/:id" element={<EditCostumer/>}/>
         <Route path="/Employees" element={<Employees/>}/>
-        <Route path="/Employees/new-employee" element={<NewEmployee/>}/>
-        <Route path="/Employees/edit-employee/:id" element={<EditEmployee/>}/>
+        <Route path="/Employees/new-employee" element={<NewVehicle/>}/>
+        <Route path="/Employees/edit-employee/:id" element={<EditVehicle/>}/>
         <Route path="/Vehicles" element={<Vehicles />}/>
+        <Route path="/Vehicles/new-vehicle" element={<NewVehicle/>}/>
+        <Route path="/Vehicles/edit-vehicle/:id" element={<EditVehicle/>}/>
         <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
         <Route path="/Services" element={<Services/>}/>
         <Route path="/Parts" element={<Parths/>}/>

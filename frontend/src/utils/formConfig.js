@@ -24,4 +24,17 @@ export const formConfig = {
         ],
         apiRoute: "http://127.0.0.1:8000/employees/",
     },
+    vehicle: {
+        fields: [
+            { apiName: "license_plate", label: "Placa", placeholder: "Digite a placa" },
+            { apiName: "brand", label: "Marca", placeholder: "Digite a marca" },
+            { apiName: "model", label: "Modelo", placeholder: "Digite o modelo" },
+            { apiName: "vehicle_type", label: "Tipo", placeholder: "Digite o tipo do veículo" },
+            { apiName: "color", label: "Cor", placeholder: "Digite a cor" },
+            { apiName: "year", label: "Ano", placeholder: "Digite o ano" },
+            { apiName: "date_of_last_service", label: "Último Serviço", placeholder: "Digite a data do último serviço" },
+            { apiName: "customer", label: "Proprietário", placeholder: "Digite o ID do proprietário" }
+        ],
+        apiRoute: "http://127.0.0.1:8000/vehicles/",
+    },
 }

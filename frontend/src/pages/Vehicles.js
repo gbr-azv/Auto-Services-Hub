@@ -14,7 +14,7 @@ function Vehicles() {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
-    const fetchVehicles= async () => {
+    const fetchVehicles = async () => {
       const response = await fetch('http://127.0.0.1:8000/vehicles/');
       const result = await response.json();
       setVehicles(result);
@@ -23,20 +23,21 @@ function Vehicles() {
   }, []);
 
   return (
-    <div className='customers-main'>
+    <div className='vehicles-main'>
       <Header
         counter={vehicles.count}
         title={'Veículos'}
       />
       <Search
         link={'/Vehicles/new-vehicle'}
-        placeholder={'Nome do Cliente'}
+        placeholder={'Nome do Veículo'}
         addButton={'Novo Veículo'}
       />
       <Dashboard/>
       <Table 
         data={vehicles} 
         object={'vehicle'}
+        urlRoute={'Vehicles'}
       />
     </div>
   );

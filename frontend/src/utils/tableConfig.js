@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 const columnConfig = {
     customer: ['id', 'name', 'social_security_number', 'phone', 'email'],
     employee: ['id', 'name', 'phone', 'email', 'salary'],
+    vehicle: ['id', 'license_plate', 'brand', 'model', 'vehicle_type']
 };
 
 export const tableHeaders = {
@@ -22,6 +23,15 @@ export const tableHeaders = {
             <th>Telefone</th>
             <th>E-mail</th>
             <th>Salário</th>
+        </tr>
+    ),
+    vehicle: (
+        <tr>
+            <th>ID</th>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Tipo</th>
         </tr>
     ),
 };
