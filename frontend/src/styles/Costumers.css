@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     font-family: Helvetica;
-    padding: 32px;
+    padding: 4em;
+    
 
 }
 
@@ -22,9 +23,12 @@
 }
 
 .container-list table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .container-list table, th, td {
