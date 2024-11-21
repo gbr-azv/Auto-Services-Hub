@@ -16,6 +16,17 @@ class PartPagination(PageNumberPagination):
 class PartViewSet(viewsets.ViewSet):
     pagination_class = PartPagination
 
+    def create(self, request):
+
+        """Create a new part."""
+
+        serializer = PartSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def list(self, request):
 
         """List all parts with pagination."""

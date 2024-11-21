@@ -16,6 +16,17 @@ class CustomerPagination(PageNumberPagination):
 class CustomerViewSet(viewsets.ViewSet):
     pagination_class = CustomerPagination
 
+    def create(self, request):
+
+        """Create a new customer."""
+
+        serializer = CustomerSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def list(self, request):
 
         """List all customers with pagination."""

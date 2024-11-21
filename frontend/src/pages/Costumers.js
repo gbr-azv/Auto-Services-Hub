@@ -29,6 +29,7 @@ function Costumers() {
         title={'Clientes'}
       />
       <Search
+        link={'/Costumers/new-costumer'}
         placeholder={'Nome do Cliente'}
         addButton={'Novo Cliente'}
       />

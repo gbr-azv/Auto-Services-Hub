@@ -11,7 +11,11 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+<<<<<<< HEAD
   background: url("C:\Joao evangelista\Auto-Services-Hub\frontend\public\fundo-login.jpg") no-repeat;
+=======
+  background: url("C:\Users\maria\OneDrive\Documentos\UCB\Programação\Web\Projeto extenssão web\Auto-Services-Hub\frontend\public\fundo-login.jpg") no-repeat;
+>>>>>>> 8b0342fbf46ee621a1ccf59b9f8b8c56d43dcf8b
   background-size: cover;
   background-position: center;
 }

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Costumers from './pages/Costumers';
+import NewCostumer from './pages/NewCostumer';
 import Vehicles from './pages/Vehicles';
 import ServiceOrders from './pages/ServiceOrders';
 import Services from './pages/Services';
@@ -16,10 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/Costumers" element={<Costumers/>}/>
+        <Route path="/Costumers/new-costumer" element={<NewCostumer/>}/>
         <Route path="/Vehicles" element={<Vehicles />}/>
         <Route path="/ServiceOrdens" element={<ServiceOrders/>}/>
         <Route path="/Services" element={<Services/>}/>
-        <Route path="/Paths" element={<o0-Parths/>}/>
+        <Route path="/Parts" element={<Parths/>}/>
         <Route path="/Employees" element={<Employees/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes>
