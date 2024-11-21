@@ -46,7 +46,7 @@ function Costumers() {
   return (
     <div className='container-list'>
       {/* //BOTAO PARA ABRIR MODAL */}
-      <button onClick={() => setMostrarModal(true)}>Adicionar Novo Cliente</button>
+      <button className='bt_new_costumers' onClick={() => setMostrarModal(true)}>Adicionar Novo Cliente</button>
 
       {/* //MODAL */}
       {mostrarModal && (
@@ -165,8 +165,8 @@ function Costumers() {
               />
             </label>
             <br />
-            <button type="submit">Salvar</button>
-            <button
+            <button className="bt-costumers-salvar" type="submit">Salvar</button>
+            <button className='bt-costumers-cancelar'
               type="button"
               onClick={() => setMostrarModal(false)}
               style={{ marginLeft: "10px" }}
