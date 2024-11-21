@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 8em;
+    margin: 30px;
 }
 
 .container-home .title {
@@ -47,7 +48,6 @@
 }
 .container-home .items-container h2{
     color: #000;
-    justify-content: space-between;
 
 }
 p{
@@ -63,5 +63,27 @@ p{
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
-    bottom: 0px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
+
+a{
+    justify-items: start;
+    align-items: center;
+}
+
+.clientes{
+    width: 380px;
+    height: 250px;
+  }
+
+.funcionarios{
+    width: 380px;
+    height: 250px;
+  }
+
+.veiculos{
+    width: 380px;
+    height: 250px;
+  }
